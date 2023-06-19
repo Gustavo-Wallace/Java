@@ -27,20 +27,20 @@ SET time_zone = "+00:00";
 -- Estrutura para tabela `produto`
 --
 
-CREATE TABLE `produto` (
-  `codigoProduto` int(11) NOT NULL,
-  `Preco` double NOT NULL,
-  `nomeProduto` varchar(11) NOT NULL,
-  `quantidade` int(100) NOT NULL,
-  `vendedor` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `chocolatesbd`.`produto` (
+  `id_produto` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  `preco` DOUBLE NOT NULL,
+  `quantidade` INT NOT NULL,
+  `vendedor` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_produto`));
 
 --
 -- Despejando dados para a tabela `produto`
 --
 
-INSERT INTO `produto` (`codigoProduto`, `Preco`, `nomeProduto`, `quantidade`, `vendedor`) VALUES
-(1, 25, 'Trufa', 2, 'Victor');
+INSERT INTO `produto` (`nome`, `Preco`, `quantidade`, `vendedor`) VALUES
+('Trufa', 25, 6, 'Victor');
 
 --
 -- Índices para tabelas despejadas
